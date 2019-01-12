@@ -1,0 +1,48 @@
+$blue: #0099ff
+$gray: #ececec
+$light-gray: whitesmoke
+
+.Conversation
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+  max-width: 300px
+
+  .Message
+    box-sizing: border-box
+    padding: 8px 10px
+    max-width: 200px
+    margin: 5px 10px
+    border-radius: 15px
+    position: relative
+    clear: both
+    font-size: 14px
+    word-wrap: break-word
+
+    &.to, &:nth-child(even)
+      float: right
+      color: #fff
+      background-color: $blue
+      &::before
+        content: ''
+        border: solid 10px
+        border-color: transparent transparent $blue
+        position: absolute
+        float: right
+        right: -7px
+        bottom: 2px
+    &.from, &:nth-child(odd)
+      float: left
+      background-color: $gray
+      &::after
+        content: ''
+        border: solid 10px
+        border-color: transparent transparent $gray
+        position: absolute
+        z-index: 1
+        bottom: 2px
+        left: -7px
+
+    .when
+      margin-top: 0.66em
+      display: block
+      font-size: 0.8em
+
